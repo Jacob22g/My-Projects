@@ -23,23 +23,11 @@ fileNamePic = "pic_" + str(j) + ".png"
 recordingFlag = -1  # enter recording mode
 savingFlag = -1  # creating a video file
 
-# Original
-# min_YCrCb = np.array([0, 133, 77], np.uint8)
-# max_YCrCb = np.array([235, 173, 127], np.uint8)
-# Good range in mp4 video
-# min_YCrCb = np.array([140, 150, 77], np.uint8)
-# max_YCrCb = np.array([220, 170, 127], np.uint8)
-# Good range for camera
 min_YCrCb = np.array([40, 140, 77], np.uint8)
 max_YCrCb = np.array([150, 170, 127], np.uint8)
-# temp
-# min_YCrCb = np.array([80, 135, 85], np.uint8)
-# max_YCrCb = np.array([255, 180, 135], np.uint8)
 
 cap = cv2.VideoCapture(0)
-# cap = cv2.VideoCapture('vid1.mp4')
 
-# while (True):---------------------------
 while (cap.isOpened()):
     ret, frame = cap.read()  # Capture frame-by-frame
     if ret is True:
